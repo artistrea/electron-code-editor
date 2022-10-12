@@ -1,0 +1,81 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clr-bg: rgb(24, 26, 37);
+    height: 99vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: var(--clr-bg);
+}
+
+#content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+#sidebar {
+    width: 20%;
+    background-color: var(--clr-bg-sidebar);
+    color: var(--clr-sidebar, whitesmoke);
+}
+
+#sidebar ul {
+    margin-left: 0.5rem;
+    padding-left: 0.5rem;
+    border-left: 1px white solid;
+}
+
+#sidebar > ul * {
+    margin-block: 1rem;
+}
+
+#sidebar li text {
+    cursor: pointer;
+}
+
+#sidebar ::marker {
+    content: '';
+}
+
+#sidebar .directory::before {
+    content: '> ';
+}
+
+#sidebar .file::before {
+    content: '  ';
+}
+
+
+#text-editor {
+    overflow-x: scroll;
+    background-color: var(--clr-bg-textarea);
+    color: var(--clr-textarea, whitesmoke);
+    resize: none;
+    overflow-wrap: normal;
+    white-space: pre;
+    width: 100%;
+    padding: .5em 1em;
+}
+
+#text-editor::placeholder {
+    color: whitesmoke;
+    opacity: 0.6;
+}
+
+#text-editor:focus {
+    outline: none;
+}

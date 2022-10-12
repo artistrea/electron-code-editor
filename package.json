@@ -1,0 +1,15 @@
+{
+  "name": "my-code-editor",
+  "version": "1.0.0",
+  "description": "A code editor that i built for myself",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Artur Padovesi Piratelli",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^21.1.0",
+    "electron-reloader": "^1.2.3"
+  }
+}
